@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="round.css">
+<link rel="stylesheet" href="clock.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<style>
+.w3-Oswald {
+    font-family: "Oswald";
+}
+</style>
+<script type="text/javascript">window.onload = function() {
+
+  clock();  
+
+    function clock() {
+    var now = new Date();
+    var TwentyFourHour = now.getHours();
+    var hour = now.getHours();
+    var min = now.getMinutes();
+    var mid = 'pm';
+    if (min < 10) {
+      min = "0" + min;
+    }
+
+    if (hour > 12) {
+      hour = hour - 12;
+    }
+      
+    if(hour==0){ 
+      hour=12;
+    }
+
+    if(TwentyFourHour < 12) {
+       mid = 'am';
+    }
+      
+    document.getElementById('currentTime').innerHTML = hour+':'+min + mid ;
+    setTimeout(clock, 1000);
+
+  }
+  
+
+  
+}
+</script>
+<body>
+<div class="w3-container w3-indigo w3-Oswald">
+  <p class="w3-xxlarge w3-round w3-card-4 w3-center" style="text-shadow:1px 1px 0 #444">LOTTO INFO PHILIPPINES</p>
+
+<div class="w3-bar w3-border w3-card-4 w3-hide-small">
+  
+<button class="w3-bar-item w3-border w3-button w3-light-gray" style="width:25%"><b>Home</b></button>
+  
+<button class="w3-bar-item w3-border w3-button w3-gray" style="width:25%"><b>Results/Winnings</b></button>
+  
+<button class="w3-bar-item w3-border w3-button w3-gray" style="width:25%"><b>How To Play</b></button>
+
+<button class="w3-bar-item w3-border w3-button w3-gray" style="width:25%"><b>How To Claim</b></button>
+</div>
+</div>
+
+
+<div class="w3-container w3-light-gray w3-Oswald">
+<div class="w3-panel w3-card-4 w3-round"><p class="w3-xlarge w3-center"><b><script type="text/javascript"> document.write(new Date().toDateString()); </script></b></p>
+<p class="w3-large w3-center w3-border" id="currentTime"></p></div></div>
+
+
+
+
+<div class="w3-row">
+  <div class="w3-half w3-panel w3-light-gray">
+    <div class="w3-panel w3-round w3-red w3-card-4"><h4 class="w3-center"><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span></h4></div>
+    <table class="w3-table-all w3-card-4 w3-hoverable">
+    <thead>
+    <tr class="w3-indigo">
+    <th>Matches (In Any Order)</th>
+    <th>Prize Money per Winner</th>
+    <th>Number of Winners</th>
+    </tr>
+    </thead>
+    <tr>
+ <td>6</td>   <td>&#x20B1;100,000,000</td>
+    <td>0</td>
+    </tr>
+    <tr>
+    <td>5</td>
+    <td>&#x20B1;500,000</td>
+    <td>7</td>
+    </tr>
+    <tr>
+    <td>4</td>
+    <td>&#x20B1;6,500</td>
+    <td>67</td>
+    </tr>
+    <tr>
+    <td>3</td>
+    <td>&#x20B1;20 (Balik Taya)</td>
+    <td>351</td>
+    </tr>
+    </table>
+    <h2>London</h2>
+    <p>London is the capital city of England.</p>
+    <p>It is the most populous city in the United Kingdom,
+    with a metropolitan area of over 13 million inhabitants.</p>
+  </div>
+
+<div class="w3-half w3-panel w3-light-gray">
+    <div class="w3-panel w3-round w3-red w3-card-4"><h4 class="w3-center"><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span></h4></div>
+
+
+<table class="w3-table-all w3-card-4 w3-hoverable">
+
+<thead>
+
+	<tr class="w3-indigo">
+
+	<th>Matches (In Any Order)</th>
+
+	<th>Prize Money per Winner</th>
+
+	<th>Number of Winners</th>
+
+	</tr>
+
+</thead>
+
+	<tr>
+	<td>6</td>
+<td>&#x20B1;100,000,000</td>
+
+	<td>0</td>
+    </tr>
+    <tr>
+    <td>5</td>
+    <td>&#x20B1;500,000</td>
+    <td>7</td>
+    </tr>
+    <tr>
+    <td>4</td>
+    <td>&#x20B1;6,500</td>
+    <td>67</td>
+    </tr>
+    <tr>
+    <td>3</td>
+    <td>&#x20B1;20 (Balik Taya)</td>
+    <td>351</td>
+    </tr>
+    </table>
+    <h2>London</h2>
+    <p>London is the capital city of England.</p>
+    <p>It is the most populous city in the United Kingdom,
+    with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+
+<div class="w3-half w3-panel w3-light-gray w3-center">
+ <img src="images/6-55.png" class="w3-round-small w3-margin-top" alt="PCSO Grand Lotto 6-55"style="width:50%;max-width:100px">
+  <p><b>PCSO Grand Lotto 6/55 Result</b></p>   <div class="w3-panel w3-round w3-red w3-card-4"><h4 class="w3-center"><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span></h4></div>
+    <table class="w3-table-all w3-card-4 w3-hoverable">
+    <thead>
+    <tr class="w3-indigo">
+    <th>Matches (In Any Order)</th>
+    <th>Prize Money per Winner</th>
+    <th>Number of Winners</th>
+    </tr>
+    </thead>
+    <tr>
+    <td>6</td>
+    <td>&#x20B1;100,000,000</td>
+    <td>0</td>
+    </tr>
+    <tr>
+    <td>5</td>
+    <td>&#x20B1;500,000</td>
+    <td>7</td>
+    </tr>
+    <tr>
+    <td>4</td>
+    <td>&#x20B1;6,500</td>
+    <td>67</td>
+    </tr>
+    <tr>
+    <td>3</td>
+    <td>&#x20B1;20 (Balik Taya)</td>
+    <td>351</td>
+    </tr>
+    </table>
+    <h2>London</h2>
+    <p>London is the capital city of England.</p>
+    <p>It is the most populous city in the United Kingdom,
+    with a metropolitan area of over 13 million inhabitants.</p>
+  </div>
+  
+  <div class="w3-half w3-panel w3-light-gray">
+  <div class="w3-panel w3-round w3-red w3-card-4"><h4 class="w3-center"><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span></h4></div>
+  <table class="w3-table-all w3-card-4 w3-hoverable">
+  <thead>
+  <tr class="w3-indigo">
+  <th>Matches (In Any Order)</th>
+  <th>Prize Money per Winner</th>
+  <th>Number of Winners</th>
+  </tr>
+  </thead>
+  <tr>
+  <td>6</td>
+  <td>&#x20B1;100,000,000</td>
+  <td>0</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>&#x20B1;500,000</td>
+  <td>7</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>&#x20B1;6,500</td>
+  <td>67</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>&#x20B1;20 (Balik Taya)</td>
+  <td>351</td>
+  </tr>
+  </table>
+  <h2>London</h2>
+  <p>London is the capital city of England.</p>
+  <p>It is the most populous city in the United Kingdom,
+  with a metropolitan area of over 13 million inhabitants.</p>
+  </div>
+ </body>
+
+  
+ 
+
+<footer class="w3-container w3-center w3-Oswald w3-indigo">
+  <p class="w3-large w3-center">© LOTTO INFO PHILIPPINES</p>
+</footer>
+</body>
+</html> 
