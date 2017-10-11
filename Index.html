@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+	<html>
+
+	<title>W3.CSS</title>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="lottoInfo.css">
+<style>
+	
+@font-face {
+   font-family: myFont1;
+   src: url(MontserratRegular.woff);
+}
+	
+@font-face {
+   font-family: myFont2;
+   src: url(gothic.woff);
+}
+	
+.mampi {
+   font-family: myFont1;
+}
+
+	.mamps {
+   font-family: myFont2;
+}
+	
+
+div.stay {
+  position: ;
+  position: sticky;
+  top: 0;
+}
+
+	
+.yellow {
+  background: #e6e600;
+
+	border-radius: 0.8em;
+
+	-moz-border-radius: 0.8em;
+
+	-webkit-border-radius: 0.8em;
+
+	color: #ffffff;
+
+	display: inline-block;
+	font-weight: bold;
+
+	line-height: 1.6em;
+	margin-right: 15px;
+	text-align: center;
+  	width: 1.6em; 
+}
+
+
+
+.red {
+  background:#ffffff;
+
+border-radius: 0.8em;
+
+-moz-border-radius: 0.8em;
+
+-webkit-border-radius: 0.8em;
+
+color: black;
+
+display: inline-block;
+  font-weight: bold;
+
+line-height: 1.6em;
+
+margin-right: 10px;
+
+text-align: center;
+
+width: 1.6em; 
+}
+
+
+
+
+
+#currentTime {
+  border: 2px solid;
+  width: 120px;
+  margin: 30px auto;
+}
+</style>
+
+
+<script type="text/javascript">window.onload = function() {
+
+  clock();  
+
+    function clock() {
+    var now = new Date();
+    var TwentyFourHour = now.getHours();
+    var hour = now.getHours();
+    var min = now.getMinutes();
+    var mid = 'pm';
+    if (min < 10) {
+      min = "0" + min;
+    }
+
+    if (hour > 12) {
+      hour = hour - 12;
+    }
+      
+    if(hour==0){ 
+      hour=12;
+    }
+
+    if(TwentyFourHour < 12) {
+       mid = 'am';
+    }
+      
+    document.getElementById('currentTime').innerHTML = hour+':'+min + mid ;
+    setTimeout(clock, 1000);
+
+  }
+  
+
+  
+}
+</script>
+
+
+<body>
+	
+<div class="w3-container w3-indigo">
+	<h3 class="mampi w3-center" style="text-shadow:1px 1px 0 #444">LOTTO INFO PHILIPPINES</h3></div>
+	<div class="mamps stay w3-large w3-bar w3-red w3-card">
+
+	<a href="#" class="w3-bar-item w3-button w3-hide-large w3-hide-medium"><b>Home | Lotto<font color="yellow">Info</font>.ph</b></a>
+
+	<a href="#" class="w3-bar-item w3-button w3-hide-small w3-light-gray"><b>Home</b></a>
+
+	<a href="#" class="w3-bar-item w3-button w3-hide-small"><b>Lotto Result Today</b></a>
+
+	<a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small" onclick="mxFunction()"><b>Results/Winnings</b></a>
+    
+	<a href="How-To-Play.html" class="w3-bar-item w3-button w3-hide-small"><b>How To Play</b></a>
+
+	<a href="How-To-Claim.html" class="w3-bar-item w3-button w3-hide-small"><b>How To Claim</b></a>
+
+	<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+
+	</div>
+
+	<div id="Lotto" class="mamps stay w3-large w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
+
+	<a href="#" class="w3-bar-item w3-button"><b>Lotto Result Today</b></a>
+
+	<a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="mxFunction()"><b>Results/Winnings</b></a>
+
+	<a href="How-To-Play.html" class="w3-bar-item w3-button"><b>How To Play</b></a>
+
+	<a href="How-To-Claim.html" class="w3-bar-item w3-button"><b>How To Claim</b></a>
+
+	</div>
+    <div id="jpm" class="mamps stay w3-large w3-panel w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+    <span onclick="mxFunction() ; this.parentElement.style.display='none'"
+    class="w3-button w3-large w3-light-gray w3-display-topright">&times;</span>
+    <h5 class="mampi w3-center"><b>Results And Winnings</b></h5>
+    <a href="#" class="w3-bar-item w3-button"><b>Swertres Lotto</b></a>
+    <a href="#" class="w3-bar-item w3-button"><b>EZ 2 Lotto</b></a>
+    <a href="#" class="w3-bar-item w3-button"><b>4 Digit Lotto</b></a>
+    <a href="#" class="w3-bar-item w3-button"><b>6 Digit Lotto</b></a>
+    <a href="#" class="w3-bar-item w3-button"><b>Ultra Lotto 6/58</b></a>
+    <a href="#" class="w3-bar-item w3-button"><b>Grand Lotto 6/55</b></a>
+    <a href="#" class="w3-bar-item w3-button"><b>Super Lotto 6/49</b></a>
+    <a href="#" class="w3-bar-item w3-button"><b>Mega Lotto 6/45</b></a>
+    <a href="#" class="w3-bar-item w3-button"><b>Lotto 6/42</b></a>
+    </div>
+
+	<script>
+  function myFunction() {
+  var x = document.getElementById("Lotto");
+  if (x.className.indexOf("w3-show") == -1) {
+  x.className += " w3-show";
+  } else { 
+  x.className = x.className.replace(" w3-show", "");
+  }
+  }
+  function mxFunction() {
+  var x = document.getElementById("jpm");
+  if (x.className.indexOf("w3-show") == -1) {
+  x.className += " w3-show";
+  } else { 
+  x.className = x.className.replace(" w3-show", "");
+  }
+  }
+	</script>
+	
+
+
+<div class="w3-row">
+
+	<div class="w3-threequarter w3-container w3-light-gray w3-center">
+
+	<div class="w3-container w3-border w3-margin-top">
+    	
+	<div class="w3-panel w3-half w3-margin-top">
+
+	<h3 class="mamps w3-xlarge w3-center"><b>Today,&nbsp;<script type="text/javascript">document.write(new Date().toDateString());</script><id="currentTime></b></h3> 
+	<h3 class="mampi w3-center" id="currentTime"></h3>
+	</div>
+	<div class="w3-panel w3-half w3-margin-top">
+
+	<h3 class="mamps w3-center"><b>Today's Draws</b></h3>
+
+	<div class="w3-center">
+
+	<img src="images/6-55.png" class="w3-margin-bottom w3-margin-right" alt="Draw" style="width:60%;max-width:130px"><img src="images/6-42.png" class="w3-margin-bottom w3-margin-left" alt="Draw" style="width:60%;max-width:120px">
+
+	</div>
+
+	</div>
+    <br>
+    </div>
+    <div class="w3-panel">
+    <br>
+    <h3 class="mamps w3-margin-top"><b>PCSO Lotto Game Results</b></h3>
+    <p class="mamps w3-left w3-large"><b>Welcome to LottoInfo.ph. The most trusted web-based portal that provides a single source of comprehensive, accurate and up-to-date information on all Philippines' lottery related matters; LOTTO RESULTS, HOW TO PLAY, HOW TO CLAIM PRIZES etc.</b></p>
+    <hr>
+    </div>
+    <br>
+    <div>
+    <div class="w3-panel w3-half">
+    <img src="images/6-58.png" class="w3-center w3-margin-top" alt="PCSO Ultra Lotto 6-58"style="width:60%;max-width:120px">
+    <h3 class="mamps"><b>Ultra Lotto 6/58 Result</b></h3>   <div class="w3-panel"><h4 class="w3-center"><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span></h4></div>
+    <table class="mampi w3-table-all w3-card-4 w3-hoverable">
+    <thead>
+    <tr class="w3-indigo">
+    <th>Matches (In Any Order)</th>
+    <th>Prize Money per Winner</th>
+    <th>Number of Winners</th>
+    </tr>
+    </thead>
+    <tr>
+    <td>6 out of 6</td>
+    <td>&#x20B1;100,000,000</td>
+    <td>0</td>
+    </tr>
+    <tr>
+    <td>5 out of 6</td>
+    <td>&#x20B1;500,000</td>
+    <td>7</td>
+    </tr>
+    <tr>
+    <td>4 out of 6</td>
+    <td>&#x20B1;6,500</td>
+    <td>67</td>
+    </tr>
+    <tr>
+    <td>3 out of 6</td>
+    <td>&#x20B1;20</td>
+    <td>351</td>
+    </tr>
+    </table>
+    <h4><button class="w3-button w3-block w3-round w3-teal w3-card-4"><b>View previous results</b></button></h4>
+    <hr class="w3-black">
+    </div>
+    <div class="w3-panel w3-half">
+    <img src="images/6-55.png" class="w3-margin-top" alt="PCSO Grand Lotto 6-55"style="width:60%;max-width:120px">
+    <h3 class="mamps"><b>Grand Lotto 6/55 Result</b></h3>
+    <div class="w3-panel">  
+    <h4 class="w3-center"><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span></h4></div>  
+    <table class="mampi w3-table-all w3-card-4 w3-hoverable">
+    <thead>
+    <tr class="w3-indigo">
+    <th>Matches (In Any Order)</th>
+    <th>Prize Money per Winner</th>
+    <th>Number of Winners</th>
+    </tr>
+    </thead>
+    <tr>
+    <td>6 out of 6</td>
+    <td>&#x20B1;100,000,000</td>
+    <td>0</td>
+    </tr>
+    <tr>
+    <td>5 out of 6</td>
+    <td>&#x20B1;500,000</td>
+    <td>7</td>
+    </tr>
+    <tr>
+    <td>4 out of 6</td>
+    <td>&#x20B1;6,500</td>
+    <td>67</td>
+    </tr>
+    <tr>
+    <td>3 out of 6</td>
+    <td>&#x20B1;20</td>
+    <td>351</td>
+    </tr>
+    </table>
+    <h4><button class="w3-button w3-block w3-round w3-teal w3-card-4"><b>View previous results</b></button></h4>
+    <hr class="w3-black">
+    </div>
+    </div>
+    <div>
+    <div class="w3-panel w3-half">
+    <img src="images/6-49.png" class="w3-margin-top" alt="PCSO Super Lotto 6-49"style="width:60%;max-width:120px">
+    <h3 class="mamps w3-center"><b>Super Lotto 6/49 Result</b></h3>   <div class="w3-panel"><h4 class="w3-center"><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span></h4></div>
+    <table class="mampi w3-table-all w3-card-4 w3-hoverable">
+    <thead>
+    <tr class="w3-indigo">
+    <th>Matches (In Any Order)</th>
+    <th>Prize Money per Winner</th>
+    <th>Number of Winners</th>
+    </tr>
+    </thead>
+    <tr>
+    <td>All 6</td>
+    <td>&#x20B1;100,000,000</td>
+    <td>0</td>
+    </tr>
+    <tr>
+    <td>5 out of 6</td>
+    <td>&#x20B1;500,000</td>
+    <td>7</td>
+    </tr>
+    <tr>
+    <td>4 out of 6</td>
+    <td>&#x20B1;6,500</td>
+    <td>67</td>
+    </tr>
+    <tr>
+    <td>3 out of 6</td>
+    <td>&#x20B1;20</td>
+    <td>351</td>
+    </tr>
+    </table>
+    <h4><button class="w3-button w3-block w3-round w3-teal w3-card-4"><b>View previous results</b></button></h4>
+    <hr class="w3-black">    
+    </div>
+    <div class="w3-panel w3-half">
+    <img src="images/6-45.png" class="w3-margin-top" alt="PCSO Mega Lotto 6-45"style="width:60%;max-width:120px">
+    <h3 class="mamps"><b>Mega Lotto 6/45 Result</b></h3>   <div class="w3-panel"><h4 class="w3-center"><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span></h4></div>
+    <table class="mampi w3-table-all w3-card-4 w3-hoverable">
+    <thead>
+    <tr class="w3-indigo">
+    <th>Matches (In Any Order)</th>
+    <th>Prize Money per Winner</th>
+    <th>Number of Winners</th>
+    </tr>
+    </thead>
+    <tr>
+    <td>All 6</td>
+    <td>&#x20B1;100,000,000</td>
+    <td>0</td>
+    </tr>
+    <tr>
+    <td>5 out of 6</td>
+    <td>&#x20B1;500,000</td>
+    <td>7</td>
+    </tr>
+    <tr>
+    <td>4 out of 6</td>
+    <td>&#x20B1;6,500</td>
+    <td>67</td>
+    </tr>
+    <tr>
+    <td>3 out of 6</td>
+    <td>&#x20B1;20</td>
+    <td>351</td>
+    </tr>
+    </table>
+    <h4><button class="w3-button w3-block w3-round w3-teal w3-card-4"><b>View previous results</b></button></h4>
+    <hr class="w3-black">
+    </div>
+    </div>
+    <div>
+    <div class="w3-panel w3-half">
+    <img src="images/6-42.png" class="w3-margin-top" alt="PCSO Lotto 6-42"style="width:60%;max-width:120px">
+    <h3 class="mamps"><b>PCSO Lotto 6/42 Result</b></h3>
+    <div class="w3-panel"><h4 class="w3-center"><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span><span class="red w3-card-4">?</span></h4></div>
+    <table class="mampi w3-table-all w3-card-4 w3-hoverable">
+    <thead>
+    <tr class="w3-indigo">
+    <th class="w3-border">Matches (In Any Order)</th>
+    <th class="w3-border">Prize Money per Winner</th>
+    <th class="w3-border">Number of Winners</th>
+    </tr>
+    </thead>
+    <tr>
+    <td>All 6</td>
+    <td>&#x20B1;100,000,000</td>
+    <td>0</td>
+    </tr>
+    <tr>
+    <td>5 out of 6</td>
+    <td>&#x20B1;500,000</td>
+    <td>7</td>
+    </tr>
+    <tr>
+    <td>4 out of 6</td>
+    <td>&#x20B1;6,500</td>
+    <td>67</td>
+    </tr>
+    <tr>
+    <td>3 out of 6</td>
+    <td>&#x20B1;20 </td>
+    <td>351</td>
+    </tr>
+    </table>
+    <h4><button class="w3-button w3-block w3-round w3-teal w3-card-4"><b>View previous results</b></button></h4> 
+   <hr class="w3-black">
+   </div>
+   <div class="w3-panel w3-half">
+   <br>
+   </div>
+   </div>
+   </div>
+
+
+	<div class="w3-quarter w3-container w3-light-gray w3-center w3-border-left">
+
+	<img src="images/Swertres.png" class="w3-margin-top" alt="PCSO Suertres Lotto"style="width:60%;max-width:120px">
+	<h3 class="mamps w3-center"><b>Today,&nbsp;<script type="text/javascript">document.write(new Date().toDateString()); </script></b></h3>
+    <div class="w3-panel w3-round w3-red w3-card-4"><h4 class="w3-center"><b>11AM&nbsp;&nbsp;&nbsp;</b><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span></h4></div>
+    <div class="w3-panel w3-round w3-red w3-card-4"><h4 class="w3-center"><b>4PM&nbsp;&nbsp;&nbsp;</b><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span></h4></div>
+    <div class="w3-panel w3-round w3-red w3-card-4"><h4 class="w3-center"><b>9PM&nbsp;&nbsp;&nbsp;</b><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span></h4></div>
+    <h4><button class="w3-button w3-block w3-round w3-teal w3-card-4"><b>View previous results</b></button></h4>
+   <hr class="w3-black">
+  <br>
+    <img src="images/EZ2Lotto.png" class="w3-margin-top" alt="PCSO EZ2 Lotto"style="width:60%;max-width:120px">
+    <h3 class="mamps w3-center"><b>Today,&nbsp;<script type="text/javascript">document.write(new Date().toDateString()); </script></b></h3>
+    <div class="w3-panel w3-round w3-red w3-card-4"><h4 class="w3-center"><b>11AM&nbsp;&nbsp;&nbsp;</b><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span></h4></div>
+    <div class="w3-panel w3-round w3-red w3-card-4"><h4 class="w3-center"><b>4PM&nbsp;&nbsp;&nbsp;</b><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span></h4></div>
+    <div class="w3-panel w3-round w3-red w3-card-4"><h4 class="w3-center"><b>9PM&nbsp;&nbsp;&nbsp;</b><span class="yellow w3-text-black w3-card-4">?</span><span class="yellow w3-text-black w3-card-4">?</span></h4></div>
+    <h4><button class="w3-button w3-block w3-round w3-teal w3-card-4"><b>View previous results</b></button></h4>
+   <br>
+ </div>
+ </div>
+<footer class="w3-container w3-center w3-Oswald w3-indigo">
+  <p class="mamps w3-large w3-center">© LOTTO INFO PHILIPPINES</p>
+</footer>
+</body>
+</html>
